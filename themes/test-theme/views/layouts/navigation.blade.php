@@ -23,6 +23,12 @@
                 class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
                 <i class="ri-home-4-line"></i> {{ __('Home') }}
             </a>
+            @auth
+                <a href="{{ route('clients.home') }}"
+                    class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
+                    {{ __('Client Area') }}
+                </a>
+            @endauth
             <button type="button" aria-expanded="true" data-dropdown-placement="bottom-start" aria-haspopup="true"
                 data-dropdown-toggle="orders"
                 class="relative md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
@@ -38,12 +44,6 @@
                         @endif
                     @endforeach
                 </div>
-            @auth
-            <a href="{{ route('clients.home') }}"
-                class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
-                {{ __('Client Area') }}
-            </a>
-                @endauth
 
             </button>
             <a href="{{ route('announcements.index') }}"
