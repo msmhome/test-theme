@@ -112,61 +112,61 @@
                     "type": "color",
                     "label": "Secondary 50",
                     "name": "secondary-50-dark",
-                    "default": "#0B0613"
+                    "default": "#1E202D"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 100",
                     "name": "secondary-100-dark",
-                    "default": "#170A24"
+                    "default": "#313441"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 200",
                     "name": "secondary-200-dark",
-                    "default": "#2F0C4B"
+                    "default": "#404351"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 300",
                     "name": "secondary-300-dark",
-                    "default": "#361254"
+                    "default": "#4F525E"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 400",
                     "name": "secondary-400-dark",
-                    "default": "#A1A1A1"
+                    "default": "#656874"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 500",
                     "name": "secondary-500-dark",
-                    "default": "#BDBDBD"
+                    "default": "#7D8091"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 600",
                     "name": "secondary-600-dark",
-                    "default": "#D1D1D1"
+                    "default": "#AEB2C2"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 700",
                     "name": "secondary-700-dark",
-                    "default": "#DEDEDE"
+                    "default": "#CACBD2"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 800",
                     "name": "secondary-800-dark",
-                    "default": "#E3E3E3"
+                    "default": "#F1F1F1"
                 },
                 {
                     "type": "color",
                     "label": "Secondary 900",
                     "name": "secondary-900-dark",
-                    "default": "#FAFAFA"
+                    "default": "#FFFFFF"
                 }
             ]   
         },
