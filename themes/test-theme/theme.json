@@ -365,6 +365,12 @@
                     "label": "Fast Panel Des",
                     "name": "fastpanel-des",
                     "default": "Our panel is the fastest panel available."
+                },
+                {
+                    "type": "text",
+                    "label": "Info Plan Des",
+                    "name": "info_plan_des",
+                    "default": "Select the game you wish to see plans for"
                 }
         ]
         }
