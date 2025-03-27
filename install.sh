@@ -114,20 +114,20 @@ check_versions() {
 install_dependencies() {
     cd $PAYMENTER_DIR
     echo -e "${YELLOW}Installing required packages...${NC}"
-    apt-get update
-    apt-get install -y git
+    sudo apt-get update
+    sudo apt-get install -y git
 
     # Check and install Node.js and npm
     if ! command -v node &> /dev/null; then
         echo -e "${YELLOW}Node.js not found. Installing Node.js...${NC}"
-        apt-get install -y nodejs
+        sudo apt-get install -y nodejs
     else
         echo -e "${GREEN}Node.js is already installed.${NC}"
     fi
 
     if ! command -v npm &> /dev/null; then
         echo -e "${YELLOW}npm not found. Installing npm...${NC}"
-        apt-get install -y npm
+        sudo apt-get install -y npm
     else
         echo -e "${GREEN}npm is already installed.${NC}"
     fi
@@ -135,7 +135,7 @@ install_dependencies() {
     # Check and install the Vite module
     if ! npm list vite &> /dev/null; then
         echo -e "${YELLOW}Vite not found. Installing Vite...${NC}"
-        npm install vite
+        sudo npm install vite
     else
         echo -e "${GREEN}Vite is already installed.${NC}"
     fi
@@ -184,7 +184,7 @@ install_theme() {
     # Run the vite.js build command
     echo -e "${BLUE}Running vite.js build for voslintheme...${NC}"
     cd $PAYMENTER_DIR
-    node vite.js voslintheme
+    sudo node vite.js voslintheme
     
     # Confirm completion
     if [ $? -eq 0 ]; then
@@ -223,4 +223,3 @@ main() {
 
 # Execute the script
 main
-
