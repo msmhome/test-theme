@@ -23,16 +23,10 @@
                 class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
                 <i class="ri-home-4-line"></i> {{ __('Home') }}
             </a>
-            @auth
-                <a href="{{ route('clients.home') }}"
-                    class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
-                    {{ __('Customer Area') }}
-                </a>
-            @endauth
             <button type="button" aria-expanded="true" data-dropdown-placement="bottom-start" aria-haspopup="true"
                 data-dropdown-toggle="orders"
                 class="relative md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
-                <i class="ri-server-line"></i> {{ __('Shop') }} <i class="ri-arrow-down-s-line"></i>
+                <i class="ri-server-line"></i> {{ __('Services') }} <i class="ri-arrow-down-s-line"></i>
 
                 <div class="absolute left-0 hidden w-56 mt-2 origin-top-right bg-secondary-200 border border-secondary-300 rounded-md z-10"
                     role="menu" aria-orientation="vertical" aria-labelledby="product" tabindex="-1" id="orders">
@@ -44,6 +38,12 @@
                         @endif
                     @endforeach
                 </div>
+            @auth
+            <a href="{{ route('clients.home') }}"
+                class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
+                {{ __('Client Area') }}
+            </a>
+                @endauth
 
             </button>
             <a href="{{ route('announcements.index') }}"
