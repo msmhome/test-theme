@@ -24,7 +24,7 @@
                 
                 <button class="button button-primary w-full mt-4">{{ __('Login') }}</button>
 
-                <!-- <a href="{{ route('register') }}" class="text-sm text-secondary-600 underline mt-2 block text-center">{{ __('New here? Create an account.') }}</a> -->
+                <a href="{{ route('register') }}" class="text-sm text-secondary-600 underline mt-2 block text-center">{{ __('New client? Create an account.') }}</a>
 
                 <div class="flex items-center justify-center">
                     <!-- Recaptcha, also send the form id -->
