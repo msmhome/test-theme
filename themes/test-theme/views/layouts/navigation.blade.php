@@ -64,7 +64,7 @@
                     @if(config('settings::theme:discord-sp') == 1)
                     <a href="{{ config('settings::theme:discord-url', '#') }}"
                         class="flex px-4 py-2 rounded text-secondary-700 hover:bg-secondary-100 hover:text-secondary-900"
-                        role="menuitem" tabindex="-1" id="menu-item-0">{{ __('Discord Support') }}</a>
+                        role="menuitem" tabindex="-1" id="menu-item-0">{{ __('Discord') }}</a>
                     @endif
                     @if(config('settings::theme:telegram-sp') == 1)
                     <a href="{{ config('settings::theme:telegram-url', '#') }}"
