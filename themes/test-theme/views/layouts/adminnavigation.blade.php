@@ -5,9 +5,9 @@
                 <a href="{{ route('index') }}">
                     <x-application-logo class="block w-auto h-10 text-gray-600 fill-current" />
                 </a>
-                <!-- <a href="{{ route('index') }}" class="p-2 text-xl font-bold">
+                <a href="{{ route('index') }}" class="p-2 text-xl font-bold">
                     {{ config('app.name', 'Paymenter') }}
-                </a> -->
+                </a>
             </div>
             <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center justify-center mr-3 text-gray-400 rounded-lg lg:hidden absolute right-0" aria-controls="mobile-menu-2" aria-expanded="false" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <span class="sr-only">Open main menu</span>
