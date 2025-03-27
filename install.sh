@@ -51,7 +51,7 @@ ask_for_paymenter_directory() {
         echo -e "${RED}The directory '$PAYMENTER_DIR' is not the Paymenter root folder. Please try again.${NC}"
         ask_for_paymenter_directory
     fi
-    THEME_DIR="$PAYMENTER_DIR/themes/voslintheme"
+    THEME_DIR="$PAYMENTER_DIR/themes/test-theme"
 }
 
 # Function to check for Voslin theme and prompt user
@@ -182,9 +182,9 @@ install_theme() {
     fi
 
     # Run the vite.js build command
-    echo -e "${BLUE}Running vite.js build for voslintheme...${NC}"
+    echo -e "${BLUE}Running vite.js build for test-theme...${NC}"
     cd $PAYMENTER_DIR
-    sudo node vite.js voslintheme
+    sudo node vite.js test-theme
     
     # Confirm completion
     if [ $? -eq 0 ]; then
@@ -202,12 +202,12 @@ install_theme() {
 }
 
 # Function to apply the theme (optional)
-apply_theme() {
-    echo -e "${BLUE}Applying the Voslin-Theme...${NC}"
-    cd $PAYMENTER_DIR
-    php artisan p:settings:change-theme voslintheme
-    echo -e "${GREEN}Theme applied. Enjoy!${NC}"
-}
+# apply_theme() {
+#     echo -e "${BLUE}Applying the Voslin-Theme...${NC}"
+#     cd $PAYMENTER_DIR
+#     php artisan p:settings:change-theme test-theme
+#     echo -e "${GREEN}Theme applied. Enjoy!${NC}"
+# }
 
 # Main program
 main() {
@@ -218,7 +218,7 @@ main() {
     check_voslin_theme
     check_versions
     install_theme
-    apply_theme
+    # apply_theme
 }
 
 # Execute the script

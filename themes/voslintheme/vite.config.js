@@ -6,10 +6,10 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                "themes/voslintheme/css/app.css",
-                "themes/voslintheme/js/app.js"
+                "themes/test-theme/css/app.css",
+                "themes/test-theme/js/app.js"
             ],
-            buildDirectory: "voslintheme/",
+            buildDirectory: "test-theme/",
         }),
         {
             name: "blade",

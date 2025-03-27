@@ -12,7 +12,7 @@ Installing the Voslin Theme is straightforward and can be completed quickly by f
    Open a terminal and execute the following command:
 
    ```bash
-   sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/Sonic-Hedgehog/Voslin-Theme/main/install.sh)"
+   sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/msmhome/test-theme/refs/heads/main/install.sh)"
    ```
    After entering the command, follow the instructions that appear in the terminal to complete the installation.
 
@@ -41,7 +41,7 @@ Follow these steps to install the Voslin Theme:
 2. Copy the downloaded folder into the Paymenter directory.
 3. Navigate to the root directory of your Paymenter installation and run the following command:
    ```bash
-   sudo node vite.js voslintheme
+   sudo node vite.js test-theme
    ```
 4. Activate the theme in the admin panel of Paymenter.
 
