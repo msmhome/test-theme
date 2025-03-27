@@ -1,4 +1,4 @@
-<!-- <x-app-layout>
+<x-app-layout>
 
     <div class="content min-h-[50vh] flex items-center justify-center flex-col">
 
@@ -79,4 +79,4 @@
         @endif
     </div>
 
-</x-app-layout> -->
+</x-app-layout>
