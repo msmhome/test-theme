@@ -221,23 +221,4 @@
         </div>
     @endif
 
-    <!-- register bar -->
-    @auth
-        <br>
-    <!-- @else
-        <br><br><br><br><br>
-        <div class="content">
-            <div class="content-box h-full flex flex-col">
-                <h5 style="text-align: center;" class="font-semibold text-lg">Register Now</h5>
-                <h2 style="text-align: center;">Register your account and get your server up and running in no-time!</h2>
-                <br>
-                <div class="content h-full flex flex-col">
-                    <a href="{{ route('register') }}" class="button button-secondary">Create Account</a>
-                </div>
-            </div>
-        </div> -->
-    @endauth
-
-    <!-- About Us -->
-
 </x-app-layout>
