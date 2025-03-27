@@ -224,7 +224,7 @@
     <!-- register bar -->
     @auth
         <br>
-    @else
+    <!-- @else
         <br><br><br><br><br>
         <div class="content">
             <div class="content-box h-full flex flex-col">
@@ -235,7 +235,7 @@
                     <a href="{{ route('register') }}" class="button button-secondary">Create Account</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     @endauth
 
     <!-- About Us -->
