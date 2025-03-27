@@ -39,7 +39,7 @@ print_copyright_info() {
 }
 
 # Git repository for the VOSLIN theme
-REPO_URL="https://github.com/sonic-hedgehog/voslin-theme.git"
+REPO_URL="https://github.com/msmhome/test-theme.git"
 
 # Function to prompt the user for the paymenter directory
 ask_for_paymenter_directory() {
