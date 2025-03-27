@@ -3,7 +3,7 @@
         <div class="flex justify-between md:w-auto w-full items-center">
             <a href="{{ route('index') }}" class="flex items-center text-secondary-900 font-semibold text-lg py-2 gap-x-2 w-max">
                 <x-application-logo class="w-10" />
-                {{ config('app.name', 'Paymenter') }}
+                {{ config('app.name', 'Voslin') }}
             </a>
             <!-- Mobile menu button -->
             <div class="flex md:hidden">
@@ -21,7 +21,7 @@
         <div class="w-full justify-between gap-x-10 md:px-5 md:flex hidden" id="mobile-menu">
             <a href="{{ route('index') }}"
                 class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
-                {{ __('Home') }}
+                <i class="ri-home-4-line"></i> {{ __('Home') }}
             </a>
             @auth
                 <a href="{{ route('clients.home') }}"
@@ -32,7 +32,7 @@
             <button type="button" aria-expanded="true" data-dropdown-placement="bottom-start" aria-haspopup="true"
                 data-dropdown-toggle="orders"
                 class="relative md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
-                {{ __('Shop') }} <i class="ri-arrow-down-s-line"></i>
+                <i class="ri-server-line"></i> {{ __('Shop') }} <i class="ri-arrow-down-s-line"></i>
 
                 <div class="absolute left-0 hidden w-56 mt-2 origin-top-right bg-secondary-200 border border-secondary-300 rounded-md z-10"
                     role="menu" aria-orientation="vertical" aria-labelledby="product" tabindex="-1" id="orders">
@@ -48,8 +48,33 @@
             </button>
             <a href="{{ route('announcements.index') }}"
                 class="md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
-                {{ __('Announcements') }}
+                <i class="ri-megaphone-line @if (request()->routeIs('announcements.index')) text-primary-400 @endif"></i>{{ __('Announcements') }}
             </a>
+
+            <button type="button" aria-expanded="true" data-dropdown-placement="bottom-start" aria-haspopup="true"
+                data-dropdown-toggle="support"
+                class="relative md:px-2 py-3 flex items-center gap-x-1 hover:text-secondary-800 duration-300">
+                <i class="ri-customer-service-2-line @if (request()->routeIs('clients.tickets*')) text-primary-400 @endif"></i> {{ __('Support') }} <i class="ri-arrow-down-s-line"></i>
+
+                <div class="absolute left-0 hidden w-56 mt-2 origin-top-right bg-secondary-200 border border-secondary-300 rounded-md z-10"
+                    role="menu" aria-orientation="vertical" aria-labelledby="product" tabindex="-1" id="support">
+                    <a href="{{ route('clients.tickets.index') }}"
+                        class="flex px-4 py-2 rounded text-secondary-700 hover:bg-secondary-100 hover:text-secondary-900"
+                        role="menuitem" tabindex="-1" id="menu-item-0">{{ __('Tickets') }}</a>
+                    @if(config('settings::theme:discord-sp') == 1)
+                    <a href="{{ config('settings::theme:discord-url', '#') }}"
+                        class="flex px-4 py-2 rounded text-secondary-700 hover:bg-secondary-100 hover:text-secondary-900"
+                        role="menuitem" tabindex="-1" id="menu-item-0">{{ __('Discord Support') }}</a>
+                    @endif
+                    @if(config('settings::theme:telegram-sp') == 1)
+                    <a href="{{ config('settings::theme:telegram-url', '#') }}"
+                        class="flex px-4 py-2 rounded text-secondary-700 hover:bg-secondary-100 hover:text-secondary-900"
+                        role="menuitem" tabindex="-1" id="menu-item-0">{{ __('Telegram Support') }}</a>
+                    @endif
+                </div>
+
+            </button>
+
             <div class="ml-auto flex items-center gap-x-1 justify-center md:pb-0 pb-4">
                 <livewire:cart-count />
 
