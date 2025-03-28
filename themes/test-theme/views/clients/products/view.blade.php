@@ -2,19 +2,19 @@
     <div class="content">
         <div class="content-box">
             <div class="mb-4">
-                <h1 class="text-2xl font-bold">{{ __('Product: ') }}{{ $product->name }}</h1>
+                <h1 class="text-2xl font-bold">{{ __('Service: ') }}{{ $product->name }}</h1>
             </div>
             <div class="flex flex-wrap -mx-2 mb-4">
                 <div class="w-full md:w-1/2 px-2">
                     <div class="mb-4">
-                        <h2 class="text-lg font-bold">{{ __('Product Details') }}</h2>
+                        <h2 class="text-lg font-bold">{{ __('Service Details') }}</h2>
                     </div>
                     <div class="mb-4">
-                        <p><span class="font-bold">{{ __('Product Name') }}: </span>{{ $product->name }}</p>
-                        <p><span class="font-bold">{{ __('Product Description') }}: </span>@markdownify($product->description)
+                        <p><span class="font-bold">{{ __('Service Name') }}: </span>{{ $product->name }}</p>
+                        <p><span class="font-bold">{{ __('Service Description') }}: </span>@markdownify($product->description)
                         </p>
                         <p>
-                            <span class="font-bold">{{ __('Product Price') }}:
+                            <span class="font-bold">{{ __('Service Price') }}:
                             </span>
                             <x-money :amount="$orderProduct->price" showFree="true" />
                         </p>
@@ -61,7 +61,7 @@
                                 </form>
                                 <x-slot name="footer">
                                     <p class="text-sm text-gray-500 dark:text-gray-400">
-                                        {{ __('This will cancel the product and any associated services.') }}
+                                        {{ __('This will cancel this service and any associated services.') }}
                                     </p>
                                 </x-slot>
                             </x-modal>
@@ -71,9 +71,9 @@
                                     {{ __('Confirm Cancellation') }}
                                 </x-slot>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                                    {{ __('Are you sure you want to cancel this product?') }}
+                                    {{ __('Are you sure you want to cancel this service?') }}
                                     <br />
-                                    {{ __('This will cancel (delete) the product and any associated services. This is irreversible.') }}
+                                    {{ __('This will cancel (delete) the service and any associated services. This is irreversible.') }}
                                 </p>
                                 <x-slot name="footer">
                                     <button class="button button-secondary" data-modal-toggle="confimrationModal">
@@ -88,16 +88,16 @@
 
                             <button class="button button-danger"  data-modal-target="cancellationModal"
                                 data-modal-toggle="cancellationModal">
-                                {{ __('Cancel Product') }}
+                                {{ __('Cancel Service') }}
                             </button>
                         @endif
                         @if ($orderProduct->cancellation()->exists())
                             <div class="mt-4">
                                 <p class="text-sm text-gray-500 dark:text-gray-400">
                                     @if($orderProduct->status == 'cancelled')
-                                        {{ __('This product has been cancelled.') }}
+                                        {{ __('This service has been cancelled.') }}
                                     @else
-                                        {{ __('This product is pending cancellation.') }}
+                                        {{ __('This service is pending cancellation.') }}
                                     @endif
                                 </p>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">
@@ -112,7 +112,7 @@
                     
                     @if($orderProduct->upgradable)
                         <a class="button button-success" href="{{ route('clients.active-products.upgrade', $orderProduct->id) }}">
-                            {{ __('Upgrade Product') }}
+                            {{ __('Upgrade Service') }}
                         </a>
                     @endif
                 </div>
