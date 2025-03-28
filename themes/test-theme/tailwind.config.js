@@ -22,7 +22,7 @@ module.exports = {
                 button: '#5270fd',
                 darkbutton: '#2f3949',
                 darkmodetext: "#cbd5e1",
-                darkmode: '#1A202C',
+                darkmode: '#111111',
                 darkmodehover: '#2D3748',
                 darkmode2: '#252D3B',
                 logo: '#5270fd',
