@@ -121,7 +121,7 @@
                 @if ($link)
                     <div class="sm:flex-1">
                         <a href="{{ $link }}" class="button button-primary" target="_blank">
-                            {{ __('Login to Product') }}
+                            {{ __('Login to Management Console') }}
                         </a>
                     </div>
                 @endif
