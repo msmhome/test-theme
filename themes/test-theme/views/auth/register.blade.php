@@ -65,7 +65,7 @@
                     <x-input type="password" required class="mt-3 w-full" label="{{ __('Confirm Password') }}"
                         placeholder="{{ __('Password..') }}" name="password_confirmation" id="password-confirm" icon="ri-lock-password-line"/>
                 </div>
-                <x-recaptcha form="register" />
+                <x-recaptcha form="register" class="mt-6" />
                 <div class="mt-3 flex justify-between items-center">
                     <a href="{{ route('login') }}" class="text-sm text-secondary-600 underline">
                         {{ __('Already registered?') }}
