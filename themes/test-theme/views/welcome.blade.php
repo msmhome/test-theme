@@ -220,5 +220,6 @@
             </div>
         </div>
     @endif
+        <x-footer />
 
 </x-app-layout>
