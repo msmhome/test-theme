@@ -107,7 +107,7 @@
             @endif
         </main>
 
-        <x-footer />
+        <!-- <x-footer /> -->
     </div>
     <x-success />
     @rappasoftTableScripts
