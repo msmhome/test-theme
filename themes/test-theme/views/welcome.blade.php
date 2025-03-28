@@ -187,7 +187,7 @@
     @if ($categories->count() > 0)
         <div class="content">
             <h2 style="text-align: center;" class="font-semibold text-2xl mb-2 text-secondary-900">{{ __('SERVICES') }}</h2>
-            <p style="text-align: center;">{{ config('settings::theme:info_plan_des', 'Select the game you wish to see plans for') }}</p>
+            <p style="text-align: center;">{{ config('settings::theme:info_plan_des') }}</p>
             <br>
             <div class="grid grid-cols-12 gap-4">
                 @foreach ($categories as $category)
@@ -220,6 +220,5 @@
             </div>
         </div>
     @endif
-        <x-footer />
 
 </x-app-layout>

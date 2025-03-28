@@ -126,7 +126,9 @@
                     {{ $slot }}
                 </main>
 
-                <!-- <x-footer /> -->
+    @if(Route::currentRouteName() == 'welcome' || Route::currentRouteName() == 'home')
+        <x-footer />
+    @endif
             </div>
         </div>
     </div>
