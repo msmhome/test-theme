@@ -239,7 +239,7 @@
                                 <div class="flex flex-row items-start justify-start">
                                     <div class="flex flex-col flex-grow w-full space-y-0 self-center text-left">
                                         <div class="text-2xl font-semibold text-black dark:text-darkmodetext">
-                                            {{__('Subject')}}: {{ $ticket->title }}
+                                            {{ $ticket->title }}
                                         </div>
                                         <div class="text-sm font-medium text-gray-700 dark:text-darkmodetext pt-2 max-w-screen-lg w-full">
                                             @if (count($ticket->messages) > 0)
@@ -250,7 +250,7 @@
                                                 </div>
                                             </div>
                                             @else
-                                            {{ __('No messages...') }}
+                                            {{ __('No tickets...') }}
                                             @endif
                                         </div>
                                     </div>
